@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "27d3a312-b40b-4e3f-b449-b511323e4764",
+		"name": "StudentsApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Students",
+			"item": [
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "This is used for setting input content type"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"test\",\n    \"lastName\": \"User\",\n    \"email\": \"test1@gmail.com\",\n    \"programme\": \"ComputerScience\",\n    \"courses\": [\n      \"C++\",\n      \"JAVA\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/student",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student"
+							]
+						},
+						"description": "This request will create a new student"
+					},
+					"response": []
+				}
+			],
+			"description": "Contains requests to create students",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delete student info",
+			"item": [
+				{
+					"name": "Delete Student Info",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/student/101",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"101"
+							]
+						},
+						"description": "This request is used to delete a student from the Student APP"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update Students",
+			"item": [
+				{
+					"name": "Update Student Information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"test\",\n    \"lastName\": \"User\",\n    \"email\": \"test1@gmail.com\",\n    \"programme\": \"ComputerScience\",\n    \"courses\": [\n      \"C++\",\n      \"JAVA\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/student/101",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"101"
+							]
+						},
+						"description": "This request is used to update all the student information"
+					},
+					"response": []
+				}
+			],
+			"description": "Contains requests to update student information",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get Student Information",
+			"item": [
+				{
+					"name": "Get All The Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"list"
+							]
+						},
+						"description": "This request gets the information of all the students"
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests that get information of the student",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
